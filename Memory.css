@@ -1,0 +1,41 @@
+.root{
+    -fx-background-color: #6A994E;
+}
+
+.button{
+    -fx-background-color: #386641;
+}
+
+.abilitiesDescription{
+    -fx-border-color: #386641;
+    -fx-border-width: 2.5;
+}
+
+.abilitiesImage{
+    -fx-border-color: #386641;
+    -fx-border-width: 2.5;
+}
+
+.matched{
+    -fx-border-color: #192E1D;
+    -fx-border-width: 2.5;
+}
+
+.ability{
+    -fx-border-color: #004A00;
+    -fx-border-width: 2;
+}
+
+.abilityCash{
+    -fx-text-fill: #004A00;
+    -fx-underline: true;
+}
+
+.gridLeftRightBottom{
+    -fx-border-color: transparent #386641 #386641 #386641;
+    -fx-border-width: 0 1.5 1.5 1.5
+}
+
+.resetColor{
+    -fx-text-fill: #333333ff;
+}
