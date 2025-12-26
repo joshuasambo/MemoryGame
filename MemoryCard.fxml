@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="456.0" maxWidth="395.0" prefHeight="456.0" prefWidth="395.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MemoryCard.MemoryCardController">
+    <children>
+        <AnchorPane fx:id="mainAnchorPane" maxHeight="456.0" maxWidth="395.0" prefHeight="456.0" prefWidth="395.0">
+            <children>
+                <VBox alignment="BOTTOM_CENTER" prefHeight="455.0" prefWidth="395.0">
+                    <children>
+                        <HBox prefHeight="100.0" prefWidth="600.0" VBox.vgrow="NEVER">
+                            <children>
+                                <Label prefHeight="39.0" prefWidth="174.0" text="Scores:" textAlignment="RIGHT" textOverrun="CENTER_ELLIPSIS" HBox.hgrow="NEVER">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets bottom="10.0" left="30.0" top="15.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <Label fx:id="scoreCounter" prefHeight="39.0" prefWidth="189.0" text="0" HBox.hgrow="NEVER">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets bottom="10.0" top="15.0" />
+                                    </HBox.margin>
+                                    <padding>
+                                        <Insets left="10.0" />
+                                    </padding>
+                                </Label>
+                                <Button alignment="CENTER" maxHeight="39.0" maxWidth="209.0" mnemonicParsing="false" onAction="#abilitiesButton" prefHeight="39.0" prefWidth="209.0" text="Abilities" HBox.hgrow="NEVER">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets bottom="10.0" top="15.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button alignment="CENTER" maxHeight="39.0" maxWidth="208.0" mnemonicParsing="false" onAction="#shopButton" prefHeight="39.0" prefWidth="208.0" text="Shop" HBox.hgrow="NEVER">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets bottom="10.0" left="12.0" right="30.0" top="15.0" />
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="600.0" VBox.vgrow="NEVER">
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <children>
+                                <Label prefHeight="54.0" prefWidth="148.0" text="Attempts left:" HBox.hgrow="NEVER">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets bottom="10.0" left="30.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <Label fx:id="attemptCounter" alignment="CENTER" contentDisplay="CENTER" prefHeight="58.0" prefWidth="62.0" HBox.hgrow="NEVER">
+                                    <HBox.margin>
+                                        <Insets bottom="10.0" />
+                                    </HBox.margin>
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets right="2.0" />
+                                    </padding>
+                                </Label>
+                                <Button fx:id="startButton" alignment="CENTER" maxHeight="54.0" maxWidth="237.0" mnemonicParsing="false" onAction="#play" prefHeight="54.0" prefWidth="237.0" text="Start" HBox.hgrow="NEVER">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets bottom="10.0" right="30.0" />
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                        </HBox>
+                        <GridPane fx:id="grid" hgap="10.0" prefHeight="361.0" prefWidth="395.0" vgap="10.0" VBox.vgrow="NEVER">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Button disable="true" maxHeight="80.0" maxWidth="150.0" mnemonicParsing="false" onAction="#cardButton" text="🌻" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.vgrow="NEVER">
+                                    <font>
+                                        <Font size="30.0" />
+                                    </font>
+                                </Button>
+                                <Button disable="true" maxHeight="80.0" maxWidth="150.0" mnemonicParsing="false" onAction="#cardButton" text="🍁" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.vgrow="NEVER">
+                                    <font>
+                                        <Font size="30.0" />
+                                    </font>
+                                </Button>
+                                <Button disable="true" maxHeight="80.0" maxWidth="150.0" mnemonicParsing="false" onAction="#cardButton" text="🌸" GridPane.columnIndex="2" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.vgrow="NEVER">
+                                    <font>
+                                        <Font size="30.0" />
+                                    </font>
+                                </Button>
+                                <Button disable="true" maxHeight="80.0" maxWidth="150.0" mnemonicParsing="false" onAction="#cardButton" text="🥝" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.vgrow="NEVER">
+                                    <font>
+                                        <Font size="30.0" />
+                                    </font>
+                                </Button>
+                                <Button disable="true" maxHeight="80.0" maxWidth="150.0" mnemonicParsing="false" onAction="#cardButton" text="🍇" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.vgrow="NEVER">
+                                    <font>
+                                        <Font size="30.0" />
+                                    </font>
+                                </Button>
+                                <Button disable="true" maxHeight="80.0" maxWidth="150.0" mnemonicParsing="false" onAction="#cardButton" text="🌸" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.vgrow="NEVER">
+                                    <font>
+                                        <Font size="30.0" />
+                                    </font>
+                                </Button>
+                                <Button disable="true" maxHeight="80.0" maxWidth="150.0" mnemonicParsing="false" onAction="#cardButton" text="🍀" GridPane.columnIndex="2" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.vgrow="NEVER">
+                                    <font>
+                                        <Font size="30.0" />
+                                    </font>
+                                </Button>
+                                <Button disable="true" maxHeight="80.0" maxWidth="150.0" mnemonicParsing="false" onAction="#cardButton" text="🥝" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.vgrow="NEVER">
+                                    <font>
+                                        <Font size="30.0" />
+                                    </font>
+                                </Button>
+                                <Button disable="true" maxHeight="80.0" maxWidth="150.0" mnemonicParsing="false" onAction="#cardButton" text="🍎" GridPane.columnIndex="2" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.vgrow="NEVER">
+                                    <font>
+                                        <Font size="30.0" />
+                                    </font>
+                                </Button>
+                                <Button disable="true" maxHeight="80.0" maxWidth="150.0" mnemonicParsing="false" onAction="#cardButton" text="🍁" GridPane.columnIndex="3" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.vgrow="NEVER">
+                                    <font>
+                                        <Font size="30.0" />
+                                    </font>
+                                </Button>
+                                <Button disable="true" maxHeight="80.0" maxWidth="150.0" mnemonicParsing="false" onAction="#cardButton" text="🍍" GridPane.columnIndex="3" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.vgrow="NEVER">
+                                    <font>
+                                        <Font size="30.0" />
+                                    </font>
+                                </Button>
+                                <Button disable="true" maxHeight="80.0" maxWidth="150.0" mnemonicParsing="false" onAction="#cardButton" text="🍇" GridPane.columnIndex="3" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.vgrow="NEVER">
+                                    <font>
+                                        <Font size="30.0" />
+                                    </font>
+                                </Button>
+                                <Button disable="true" maxHeight="80.0" maxWidth="150.0" mnemonicParsing="false" onAction="#cardButton" text="🍍" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER">
+                                    <font>
+                                        <Font size="30.0" />
+                                    </font>
+                                </Button>
+                                <Button disable="true" maxHeight="80.0" maxWidth="150.0" mnemonicParsing="false" onAction="#cardButton" text="🍀" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER">
+                                    <font>
+                                        <Font size="30.0" />
+                                    </font>
+                                </Button>
+                                <Button disable="true" maxHeight="80.0" maxWidth="150.0" mnemonicParsing="false" onAction="#cardButton" text="🌻" GridPane.columnIndex="2" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER">
+                                    <font>
+                                        <Font size="30.0" />
+                                    </font>
+                                </Button>
+                                <Button disable="true" maxHeight="80.0" maxWidth="150.0" mnemonicParsing="false" onAction="#cardButton" text="🍎" GridPane.columnIndex="3" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER">
+                                    <font>
+                                        <Font size="30.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                            <padding>
+                                <Insets bottom="30.0" left="30.0" right="30.0" top="10.0" />
+                            </padding>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                        </GridPane>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="shopAnchorPane" maxHeight="456.0" maxWidth="395.0" mouseTransparent="true" prefHeight="456.0" prefWidth="395.0" visible="false">
+            <children>
+                <VBox alignment="BOTTOM_CENTER" layoutY="-1.0" prefHeight="458.0" prefWidth="395.0">
+                    <children>
+                        <HBox prefHeight="190.0" prefWidth="395.0">
+                            <children>
+                                <VBox prefHeight="190.0" prefWidth="121.0">
+                                    <children>
+                                        <Label alignment="CENTER" prefHeight="74.0" prefWidth="186.0" text="Shop">
+                                            <font>
+                                                <Font name="System Bold" size="22.0" />
+                                            </font>
+                                            <padding>
+                                                <Insets bottom="15.0" />
+                                            </padding>
+                                        </Label>
+                                        <Label prefHeight="48.0" prefWidth="132.0" text="Total scores:">
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                            <padding>
+                                                <Insets bottom="10.0" />
+                                            </padding>
+                                        </Label>
+                                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#convertScores" prefHeight="30.0" prefWidth="106.0" text="Convert">
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Button>
+                                        <HBox prefHeight="78.0" prefWidth="123.0">
+                                            <children>
+                                                <Label prefHeight="61.0" prefWidth="54.0" text="Coins:">
+                                                    <font>
+                                                        <Font size="18.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets />
+                                                    </HBox.margin>
+                                                    <padding>
+                                                        <Insets bottom="10.0" />
+                                                    </padding>
+                                                </Label>
+                                                <Label fx:id="moneyAmount" prefHeight="66.0" prefWidth="47.0" text="0">
+                                                    <font>
+                                                        <Font size="20.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets bottom="10.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                    <HBox.margin>
+                                        <Insets left="30.0" />
+                                    </HBox.margin>
+                                </VBox>
+                                <VBox prefHeight="190.0" prefWidth="105.0">
+                                    <children>
+                                        <Label fx:id="shopTotalScores" prefHeight="110.0" prefWidth="87.0" text="0">
+                                            <VBox.margin>
+                                                <Insets top="18.0" />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                            <padding>
+                                                <Insets bottom="13.0" left="4.0" />
+                                            </padding>
+                                            <opaqueInsets>
+                                                <Insets />
+                                            </opaqueInsets>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox alignment="TOP_RIGHT" prefHeight="190.0" prefWidth="161.0">
+                                    <children>
+                                        <Button maxHeight="60.0" maxWidth="208.0" minHeight="39.0" mnemonicParsing="false" onAction="#backButton" prefHeight="39.0" prefWidth="115.0" text="Back">
+                                            <VBox.margin>
+                                                <Insets bottom="5.0" left="51.0" />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font name="System Bold" size="16.0" />
+                                            </font>
+                                        </Button>
+                                        <VBox prefHeight="64.0" prefWidth="129.0">
+                                            <children>
+                                                <Label alignment="CENTER" prefHeight="269.0" prefWidth="146.0" text="Highest Score:">
+                                                    <font>
+                                                        <Font name="System Bold" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="highestScoreDisplay" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="37.0" prefWidth="158.0" text="0">
+                                                    <font>
+                                                        <Font name="System Bold" size="20.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets top="15.0" />
+                                            </VBox.margin>
+                                        </VBox>
+                                    </children>
+                                    <HBox.margin>
+                                        <Insets right="30.0" />
+                                    </HBox.margin>
+                                </VBox>
+                            </children>
+                            <VBox.margin>
+                                <Insets top="17.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <GridPane prefHeight="238.0" prefWidth="395.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="139.99999084472657" minHeight="10.0" prefHeight="44.40000610351562" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="172.79999389648438" minHeight="10.0" prefHeight="74.79999389648437" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="172.79999389648438" minHeight="10.0" prefHeight="25.800006103515628" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="180.0000061035156" minHeight="10.0" prefHeight="104.39997558593751" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Label alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="163.0" prefWidth="157.0" styleClass="abilitiesDescription" text="Gains extra 2 - 5 attempts" wrapText="true" GridPane.rowIndex="3">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                    <GridPane.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label alignment="TOP_CENTER" prefHeight="162.0" prefWidth="213.0" styleClass="abilitiesDescription" text="Multiply scores by 2 or 3" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                    <GridPane.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </GridPane.margin></Label>
+                                <Label alignment="TOP_CENTER" maxHeight="-Infinity" prefHeight="102.0" prefWidth="89.0" styleClass="abilitiesDescription" text="Reveals 2 - 5 random cards for 2s" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                    <padding>
+                                        <Insets left="5.0" />
+                                    </padding>
+                                    <GridPane.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label alignment="TOP_CENTER" prefHeight="120.0" prefWidth="74.0" styleClass="abilitiesDescription" text="Reveals chosen card's pair for 2s" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                    <GridPane.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Button mnemonicParsing="false" onAction="#purchaseButton" prefHeight="42.0" prefWidth="106.0" text="5" userData="Bolts">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                    <GridPane.margin>
+                                        <Insets bottom="10.0" left="5.0" right="5.0" top="5.0" />
+                                    </GridPane.margin>
+                                </Button>
+                                <Button mnemonicParsing="false" onAction="#purchaseButton" prefHeight="74.0" prefWidth="112.0" text="12" userData="Cash" GridPane.columnIndex="1">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                    <GridPane.margin>
+                                        <Insets bottom="10.0" left="5.0" right="5.0" top="5.0" />
+                                    </GridPane.margin>
+                                </Button>
+                                <Button mnemonicParsing="false" onAction="#purchaseButton" prefHeight="85.0" prefWidth="102.0" text="6" userData="Key" GridPane.columnIndex="2">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                    <GridPane.margin>
+                                        <Insets bottom="10.0" left="5.0" right="5.0" top="5.0" />
+                                    </GridPane.margin>
+                                </Button>
+                                <Button mnemonicParsing="false" onAction="#purchaseButton" prefHeight="60.0" prefWidth="106.0" text="8" userData="Glass" GridPane.columnIndex="3">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                    <GridPane.margin>
+                                        <Insets bottom="10.0" left="5.0" right="5.0" top="5.0" />
+                                    </GridPane.margin>
+                                </Button>
+                                <Label alignment="CENTER" prefHeight="77.0" prefWidth="86.0" styleClass="abilitiesImage" text="💰" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font size="42.0" />
+                                    </font>
+                                    <GridPane.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label alignment="CENTER" prefHeight="80.0" prefWidth="85.0" styleClass="abilitiesImage" text="🔑" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font size="42.0" />
+                                    </font>
+                                    <GridPane.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label alignment="CENTER" prefHeight="73.0" prefWidth="113.0" styleClass="abilitiesImage" text="🔍" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font size="42.0" />
+                                    </font>
+                                    <GridPane.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label alignment="CENTER" prefHeight="79.0" prefWidth="88.0" styleClass="abilitiesImage" text="🔩" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font size="42.0" />
+                                    </font>
+                                    <GridPane.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label alignment="CENTER" prefHeight="53.0" prefWidth="85.0" text="Bolts" GridPane.rowIndex="2">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                    <GridPane.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label alignment="CENTER" prefHeight="50.0" prefWidth="86.0" text="Cash" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                    <GridPane.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label alignment="CENTER" prefHeight="54.0" prefWidth="84.0" text="Key" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                    <GridPane.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label alignment="CENTER" prefHeight="51.0" prefWidth="85.0" text="Glass" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                    <GridPane.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </GridPane.margin>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="30.0" left="30.0" right="30.0" />
+                            </VBox.margin>
+                        </GridPane>
+                    </children>
+                </VBox>
+            </children></AnchorPane>
+        <AnchorPane fx:id="abilitiesAnchorPane" layoutX="10.0" layoutY="10.0" maxHeight="456.0" maxWidth="395.0" mouseTransparent="true" prefHeight="456.0" prefWidth="395.0" visible="false">
+            <children>
+                <VBox alignment="TOP_CENTER" maxHeight="456.0" maxWidth="395.0" minHeight="456.0" minWidth="395.0" prefHeight="456.0" prefWidth="395.0">
+                    <children>
+                        <HBox prefHeight="230.0" prefWidth="395.0">
+                            <children>
+                                <VBox prefHeight="214.0" prefWidth="266.0">
+                                    <children>
+                                        <Label prefHeight="44.0" prefWidth="224.0" text="Abilities">
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font name="System Bold" size="22.0" />
+                                            </font>
+                                            <padding>
+                                                <Insets bottom="5.0" left="7.0" />
+                                            </padding>
+                                        </Label>
+                                        <HBox prefHeight="54.0" prefWidth="230.0">
+                                            <children>
+                                                <Label alignment="CENTER" prefHeight="78.0" prefWidth="124.0" text="Current ability:">
+                                                    <HBox.margin>
+                                                        <Insets />
+                                                    </HBox.margin>
+                                                    <font>
+                                                        <Font size="19.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="currentAbilityDisplay" prefHeight="54.0" prefWidth="91.0" text="None">
+                                                    <font>
+                                                        <Font name="System Bold" size="18.0" />
+                                                    </font>
+                                                    <padding>
+                                                        <Insets left="4.0" />
+                                                    </padding>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                              <Label fx:id="abilityDescription" alignment="TOP_CENTER" prefHeight="118.0" prefWidth="216.0" wrapText="true">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                                    </children>
+                                    <HBox.margin>
+                                        <Insets left="30.0" top="15.0" />
+                                    </HBox.margin>
+                                </VBox>
+                                <VBox prefHeight="230.0" prefWidth="201.0">
+                                    <children>
+                                        <VBox alignment="TOP_RIGHT" prefHeight="230.0" prefWidth="199.0">
+                                            <children>
+                                                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#backButton" prefHeight="38.0" prefWidth="92.0" text="Back">
+                                                    <font>
+                                                        <Font name="System Bold" size="14.0" />
+                                                    </font>
+                                       <VBox.margin>
+                                          <Insets right="30.0" />
+                                       </VBox.margin>
+                                                </Button>
+                                              <Label fx:id="inefficientWarningLabel" alignment="CENTER" prefHeight="60.0" prefWidth="130.0" wrapText="true">
+                                                  <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                  </font>
+                                       <VBox.margin>
+                                          <Insets right="20.0" />
+                                       </VBox.margin>
+                                              </Label>
+                                            </children>
+                                            <padding>
+                                                <Insets top="15.0" />
+                                            </padding>
+                                        </VBox>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                        <GridPane alignment="CENTER" prefHeight="114.0" prefWidth="395.0" VBox.vgrow="NEVER">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="244.00001068115236" minHeight="10.0" prefHeight="33.400000000000006" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="244.00001068115236" minHeight="10.0" prefHeight="85.80001220703124" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Label alignment="CENTER" prefHeight="95.0" prefWidth="100.0" styleClass="abilitiesImage" text="🔑" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font size="42.0" />
+                                    </font>
+                                    <GridPane.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label alignment="CENTER" prefHeight="95.0" prefWidth="100.0" styleClass="abilitiesImage" text="💰" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font size="42.0" />
+                                    </font>
+                                    <GridPane.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label alignment="CENTER" prefHeight="95.0" prefWidth="100.0" styleClass="abilitiesImage" text="🔩" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font size="42.0" />
+                                    </font>
+                                    <GridPane.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label alignment="CENTER" prefHeight="84.0" prefWidth="86.0" styleClass="abilitiesImage" text="🔍" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font size="42.0" />
+                                    </font>
+                                    <GridPane.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label alignment="CENTER" prefHeight="31.0" prefWidth="91.0" text="Bolts">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" prefHeight="31.0" prefWidth="91.0" text="Cash" GridPane.columnIndex="1">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" prefHeight="31.0" prefWidth="91.0" text="Key" GridPane.columnIndex="2">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" prefHeight="31.0" prefWidth="91.0" text="Glass" GridPane.columnIndex="3">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets left="25.0" right="25.0" />
+                            </padding>
+                        </GridPane>
+                        <HBox fx:id="hBoxRemainContainer" prefHeight="30.0" prefWidth="353.0">
+                            <children>
+                                <Label fx:id="Bolts" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="61.0" prefWidth="100.0" text="0">
+                                    <HBox.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                                <Label fx:id="Cash" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="46.0" prefWidth="98.0" text="0">
+                                    <HBox.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                                <Label fx:id="Key" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="99.0" text="0">
+                                    <HBox.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                                <Label fx:id="Glass" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="37.0" prefWidth="100.0" text="0">
+                                    <HBox.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets left="23.0" right="23.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="30.0" prefWidth="395.0">
+                            <children>
+                                <Button fx:id="bolts" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#abilityUsePick" prefHeight="42.0" prefWidth="100.0" text="Use">
+                                    <font>
+                                        <Font name="System Bold" size="17.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button fx:id="cash" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#abilityUsePick" prefHeight="43.0" prefWidth="100.0" text="Use">
+                                    <font>
+                                        <Font name="System Bold" size="17.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button fx:id="key" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#abilityUsePick" prefHeight="42.0" prefWidth="100.0" text="Use">
+                                    <font>
+                                        <Font name="System Bold" size="17.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button fx:id="glass" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#abilityUsePick" prefHeight="42.0" prefWidth="100.0" text="Use">
+                                    <font>
+                                        <Font name="System Bold" size="17.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                            <padding>
+                                <Insets left="23.0" right="23.0" />
+                            </padding>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>
